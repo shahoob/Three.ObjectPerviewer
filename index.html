@@ -52,7 +52,7 @@ LoadALLbtn.onclick = function() {
 var pathObject = document.getElementById("objectData").value;
 var pathAnimation = document.getElementById("animationData").value;
 var pathTexture = document.getElementById("textureImage").value;
-var pathBuffer
+var pathBuffer = document.getElementById("bufferGeometryData").value;
 console.log("PREPARING SYSTEM BEFORE LOAD...");
 console.log("DEFINE: animationLoader = new THREE.AnimateLoader();");
 var animationLoader = new THREE.AnimationLoader();
@@ -68,7 +68,22 @@ form.style.visibility = 'hidden';
 console.log("SHOWING LOADING SCREEN...");
 loading.style.visibility = 'visible';
 	
-if()
+if(pathBufferGeometry){
+	bufferGeometryLoader.load(
+		pathBuffer,
+		
+		function ( geometry ) {
+			var bufferGeometryData1 = geometry;
+		},
+		
+		function ( xhr ) {
+			console.log("LOADING" + pathBuffer + (xhr.loaded / xhr.total * 100) + %);
+		},
+				    
+		function ( err ) {
+			console.error(err);
+		}
+	);
 
 if(pathObject){
 	objectLoader.load(
@@ -84,8 +99,8 @@ if(pathObject){
 				    
 		function ( err ) {
 			console.error(err);
-		},
-}
+		}
+);
 
 </script>
 

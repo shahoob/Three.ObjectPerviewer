@@ -28,7 +28,14 @@ body {
 
 
 <div class="form">
-  <button id="LoadAllbtn">Load ALL</button>
+	<p>Object File:</p>
+	<input type="file" id="objectData" accept=".json">
+	<p>Animation File:</p>
+	<input type="file" id="animationData" accept=".json,.js">
+	<p>Texture File:</p>
+	<input type="file" id="textureImage" accept=".jpg">
+        <button id="LoadAllbtn">Load ALL</button>
+	<button id="Perview">Perview</button>
 </div>
 
 <div class="loading">
@@ -40,6 +47,9 @@ body {
 
 LoadALLbtn = document.gertElementById("LoadALLbtn");
 LoadALLbtn.onclick = function() {
+var pathObject = document.getElementById("objectData").value;
+var pathAnimation = document.getElementById("animationData").value;
+var pathTexture = document.getElementById("textureImage").value;
 console.log("PREPARING SYSTEM BEFORE LOAD...");
 console.log("DEFINE: animationLoader = new THREE.AnimateLoader();");
 var animationLoader = new THREE.AnimationLoader();
@@ -49,6 +59,23 @@ console.log("DEFINE: textureLoader = new THREE.TextureLoader();");
 var textureLoader = new THREE.TextureLoader();
 console.log("SYSTEM READY");
 console.log("HIDING FORM...");
+form.style.visibility = 'hidden';
+console.log("SHOWING LOADING SCREEN...");
+loading.style.visibility = 'visible';
+if(pathObject){
+	objectLoader.load(
+		pathObject,
+		
+		function ( obj ) {
+			var objectData1 = obj;
+		},
+		
+		function ( xhr ) {
+			console.log("LOADING" + pathObject + (xhr.loaded / xhr.total * 100) + %);
+		},
+				    
+		function ( err ) {
+			console.error(err);
 }
 
 </script>

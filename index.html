@@ -34,6 +34,8 @@ body {
 	<input type="file" id="animationData" accept=".json,.js">
 	<p>Texture File:</p>
 	<input type="file" id="textureImage" accept=".jpg">
+	<p>Buffer GeometryFile:</p>
+	<input type="file" id="bufferGeometryData" accept=".json">
         <button id="LoadAllbtn">Load ALL</button>
 	<button id="Perview">Perview</button>
 </div>
@@ -50,6 +52,7 @@ LoadALLbtn.onclick = function() {
 var pathObject = document.getElementById("objectData").value;
 var pathAnimation = document.getElementById("animationData").value;
 var pathTexture = document.getElementById("textureImage").value;
+var pathBuffer
 console.log("PREPARING SYSTEM BEFORE LOAD...");
 console.log("DEFINE: animationLoader = new THREE.AnimateLoader();");
 var animationLoader = new THREE.AnimationLoader();
@@ -57,11 +60,16 @@ console.log("DEFINE: objectLoader = new THREE.ObjectLoader();");
 var objectLoader = new THREE.ObjectLoader();
 console.log("DEFINE: textureLoader = new THREE.TextureLoader();");
 var textureLoader = new THREE.TextureLoader();
+console.log("DEFINE: bufferGeometryLoader = new THREE.BufferGeometry();");
+var bufferGeometryLoader = new THREE.BufferGeometryLoader();
 console.log("SYSTEM READY");
 console.log("HIDING FORM...");
 form.style.visibility = 'hidden';
 console.log("SHOWING LOADING SCREEN...");
 loading.style.visibility = 'visible';
+	
+if()
+
 if(pathObject){
 	objectLoader.load(
 		pathObject,
@@ -76,6 +84,7 @@ if(pathObject){
 				    
 		function ( err ) {
 			console.error(err);
+		},
 }
 
 </script>

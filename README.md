@@ -11,4 +11,13 @@ Because I don't want to push all commits there.
 If I do it, there will be a massive delay of committing the code.
 You're welcome
 
+NOTE: This project wasn't working well
+Due to the JS Error Of The system.js "Unexpected end of input"
+And Three.js Couldn't import the module "polyfills.js"
+
+I couldn't fix them.
+
+To improve this project, Email me At shehabtweel@gmail.com to invite to this repo
+Then go to "improvements" branch > pull request "Help needed"
+
 Shehab Ali Tweel

@@ -88,4 +88,5 @@ Preview.onclick = function() {
                         }
             );
           };
-        };};
+        };
+      };

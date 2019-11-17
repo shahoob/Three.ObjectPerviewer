@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="div.css">
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="div.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<title>Three.ObjectPerviewer 1.0</title>
+  <style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+	</style>
 </head>
 <body>
 
@@ -21,17 +26,30 @@
 	<input type="file" class="form-control-file" id="bufferGeometryData" accept=".json">
 	<label for="materialData">Material File:</label>
 	<input type="file" iclass="form-control-file" id="materialData" accept=".json">
-	<button id="Perview">Perview</button>
+	<button id="Preview">Preview</button>
 </div>
 </form>
 
 <div class="loading">
 
 </div>
-<div class="class_perview">
+<script src="preview_system.js"></script>
+<div class="card text-center" id="card_preview">
+<h5 class="card-header">Preview</h5>
+<div class="card-body" id="card_preview_content">
 
 </div>
+
+</div>
+
 <script src="three.js"></script>
-<script src="system.js"></script>
+<script>
+console.log("Three.ObjectPerviewer DEBUGGING SYSTEM 1.1");
+console.log("DIVS:");
+console.log(divs);
+let divs = document.getElementsByTagName("div")
+var Preview = document.getElementById("Preview");
+</script>
+<script src="events.js"></script>
 </body>
 </html>

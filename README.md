@@ -20,4 +20,8 @@ I couldn't fix them.
 To improve this project, Email me At shehabtweel@gmail.com to invite to this repo
 Then go to "improvements" branch > pull request "Help needed"
 
+EDIT: This project is fixed
+Thanks To Visual Studio Code Showing Problems, You dont have to fix the project.
+You can see the pull request anyway. Which is merged right now..
+
 Shehab Ali Tweel
